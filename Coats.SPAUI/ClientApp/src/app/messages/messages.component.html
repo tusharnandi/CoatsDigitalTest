@@ -1,0 +1,11 @@
+
+
+
+<div *ngIf="messageService.messages.length" class="alert alert-info" role="alert">
+
+  <button class="btn btn-dark" (click)="messageService.Clear()">Clear Logs</button>
+
+  <div *ngFor="let m of messageService.messages">
+    {{m}}
+  </div>
+</div>

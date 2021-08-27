@@ -1,0 +1,32 @@
+<div class="card" *ngIf="customer">
+  <div class="card-body">
+
+      <table>
+        <tr>
+          <td><label>Company:</label></td>
+          <td><input name="companyName" [(ngModel)]="customer.companyName" placeholder="companyName" /></td>
+        </tr>
+        <tr>
+          <td><label>Person:</label></td>
+          <td><input name="contactPersonName" [(ngModel)]="customer.contactPersonName" placeholder="contactPersonName" /></td>
+        </tr>
+        <tr>
+          <td><label>Address:</label></td>
+          <td><input name="companyAddress" [(ngModel)]="customer.companyAddress" placeholder="companyAddress" /></td>
+        </tr>
+        <tr>
+          <td><label>Email:</label></td>
+          <td><input name="email" [(ngModel)]="customer.email" placeholder="email" /></td>
+        </tr>
+        <tr>
+          <td><label>Phone:</label></td>
+          <td><input name="phone" [(ngModel)]="customer.phone" placeholder="phone" /></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><button class="btn btn-info" (click)="OnSave(customer)"> Save </button></td>
+        </tr>
+      </table>
+
+</div>
+</div>

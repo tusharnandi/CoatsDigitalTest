@@ -1,0 +1,33 @@
+<button (click)="OnAddClick()" class="btn btn-primary">Add Customer</button>
+
+
+<table  class='table table-striped' aria-labelledby="tableCustomerLebel" *ngIf="customers">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>company Name</th>
+      <th>contact Person</th>
+      <th>company Address</th>
+      <th>email</th>
+      <th>phone</th> 
+      <th>action</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    <tr *ngFor="let c of customers">
+      <td>{{c.id}}</td>
+      <td>{{c.companyName}}</td>
+      <td>{{c.contactPersonName}}</td>
+      <td>{{c.companyAddress}}</td>
+      <td>{{c.email}}</td>
+      <td>{{c.phone}}</td>
+      <td><button class="btn btn-link" (click)="OnSelect(c)">Edit</button></td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+<app-customer-detail [customer]="selectedCustomer" (reloadCustomerNotification)="OnRefreshCustomerList()"></app-customer-detail>
+
